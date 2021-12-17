@@ -27,14 +27,14 @@ public class PaymentController {
 
     @PostMapping(value = "/payment/create")
     public CommonResult create(@RequestBody Payment payment){
-       int result =  paymentService.create(payment);
-       log.info("********插入结果为："+result);
-       Integer a =10;
-       if(result>0){
-           return new CommonResult(200,"插入数据库成功,端口号为："+serverPort,result);
-       }else {
-           return  new CommonResult(444,"插入数据失败",null);
-       }
+        int result =  paymentService.create(payment);
+        log.info("********插入结果为："+result);
+        Integer a =10;
+        if(result>0){
+            return new CommonResult(200,"插入数据库成功,端口号为："+serverPort,result);
+        }else {
+            return  new CommonResult(444,"插入数据失败",null);
+        }
     }
 
     @ResponseBody
