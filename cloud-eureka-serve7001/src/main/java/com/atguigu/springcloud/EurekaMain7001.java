@@ -2,6 +2,7 @@ package com.atguigu.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.cloud.netflix.hystrix.HystrixCommands;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.cloud.netflix.hystrix.HystrixCommands;
  * @Email 17854262969@163.com
  */
 @SpringBootApplication
+@EnableEurekaServer
 public class EurekaMain7001 {
     public static void main(String[] args){
         SpringApplication.run(EurekaMain7001.class,args);
